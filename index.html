@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" h-screen max-h-screen box-border">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Front test</title>
+        <script type="text/javascript" src="./index.js" defer=""></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <link rel="stylesheet" href="./index.css"> -->
+    </head>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>Front test</title>
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./index.css">
-  </head>
-
-  <body>
-    <head></head>
-    <div class="container">
-      <div contenteditable="true" id="main">
-        
-    </div>
-      <div class="separator"></div>
-      <div id="result"></div>
-    </div>
-
-
-
-  </body>
-
+    <body class=" flex flex-col h-screen max-h-screen overflow-y-hidden">
+        <header
+            class="flex justify-center items-center bg-slate-700 text-gray-50 text-2xl shadow-md"
+        >
+            <h1 class="flex justify-center items-center h-16">
+                Simple Markdown Editor
+            </h1>
+        </header>
+        <div class="container flex flex-1 overflow-y-hidden">
+            <div contenteditable="true" class="outline-0 flex-1 h-full overflow-y-auto bg-gray-200 rounded-lg p-4" id="main"></div>
+            <div class="separator h-full w-1 bg-slate-700"></div>
+            <div id="result" class="flex-1 h-full overflow-y-auto p-4"></div>
+        </div>
+    </body>
 </html>
