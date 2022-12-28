@@ -3,11 +3,13 @@
     //italic tag
     //link tag
     //image tag
+    //Anchor tag
 //Then split by \n
 //Indetify the Heading tags
     //When analizyng the heading tags, is important take care on blank lines with line break
     //because it results in <p></p> 
-//Anchor tags
+//Indetify the blockquote tags
+
 const regexs = {
     headings: {
         h1: /(^#\s)/gm,
@@ -97,6 +99,7 @@ function processChange() {
                 selectedTag = "blockquote"
                 line = line.replaceAll(regexs.blockquote, "")
             }
+            
             newInnerHtml += `<${selectedTag} class="${stylesByTag[selectedTag]}">${line}</${selectedTag}>`
         })
         newInnerHtml = newInnerHtml.replaceAll(regexs.image,'<img alt="$1" src="$2">')
