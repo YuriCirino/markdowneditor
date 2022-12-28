@@ -46,7 +46,7 @@ let result = document.getElementById("result")
 let timer
 let lines
 
-function processChange2() {
+function processChange() {
     let newInnerHtml
     clearTimeout(timer)
     timer = setTimeout(() => {
@@ -105,6 +105,7 @@ function processChange2() {
     }, 300)
 }
 
-main.addEventListener("input", processChange2)
-main.addEventListener("focus", processChange2)
+main.addEventListener("input", processChange)
+document.addEventListener("DOMContentLoaded",processChange);
+
 
